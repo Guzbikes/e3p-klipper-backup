@@ -12,7 +12,7 @@ elif [ "$1" == "on" ]; then
     sudo systemctl unmask $TIMERS
     sudo systemctl start cron
     # Manually trigger a start for timers just in case they were missed
-    sudo systemctl start fstrim.timer
+    sudo systemctl start $TIMERS
 else
     echo "Usage: $0 {on|off}"
 fi
